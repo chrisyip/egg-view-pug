@@ -1,0 +1,40 @@
+{
+  "name": "egg-view-pug",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/chrisyip/egg-view-pug.git",
+  "author": "Chris Yip <chris@yesui.co>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "pug": "^2.0.0-beta11"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "cheerio": "^0.22.0",
+    "egg": "^1.0.0-rc.1",
+    "egg-mock": "^3.0.1",
+    "egg-view": "^1.0.0",
+    "mz": "^2.6.0",
+    "nyc": "^10.1.2",
+    "standard": "^8.6.0",
+    "supertest": "^3.0.0"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "nyc ava",
+    "coverage": "nyc report --reporter=lcov --reporter=html",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "eggPlugin": {
+    "name": "pug",
+    "dependencies": [
+      "view"
+    ]
+  },
+  "files": [
+    "config",
+    "lib",
+    "app.js"
+  ]
+}
