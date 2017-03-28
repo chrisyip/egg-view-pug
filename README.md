@@ -14,7 +14,7 @@ npm i egg-view-pug --save
 
 ```js
 // {app_root}/config/plugin.js
-exports.view = {
+exports.pug = {
   enable: true,
   package: 'egg-view-pug'
 }
@@ -49,7 +49,7 @@ Render it
 ```js
 // app/controller/render.js
 exports.pug = function* () {
-  yield ctx.render('hello.pug', {
+  yield this.render('hello.pug', {
     data: 'world'
   })
 }
