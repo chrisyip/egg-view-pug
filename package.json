@@ -6,8 +6,7 @@
   "author": "Chris Yip <chris@yesui.co>",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.4.7",
-    "pug": "^2.0.0-beta11"
+    "pug": "^3"
   },
   "devDependencies": {
     "ava": "^0.18.2",
