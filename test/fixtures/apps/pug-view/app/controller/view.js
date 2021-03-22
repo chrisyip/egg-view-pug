@@ -1,37 +1,37 @@
 'use strict'
 
 module.exports = {
-  * index (ctx) {
-    yield ctx.render('index.pug', { data: 'world' })
+  async index (ctx) {
+    await ctx.render('index.pug', { data: 'world' })
   },
 
-  * renderString (ctx) {
-    ctx.body = yield ctx.renderString('| hello #{data}', { data: 'world' })
+  async renderString (ctx) {
+    ctx.body = await ctx.renderString('| hello #{data}', { data: 'world' })
   },
 
-  * renderWithExtend (ctx) {
-    yield ctx.render('extend.pug', { data: 'world' })
+  async renderWithExtend (ctx) {
+    await ctx.render('extend.pug', { data: 'world' })
   },
 
-  * renderWithInclude (ctx) {
-    yield ctx.render('include.pug', { data: 'world' })
+  async renderWithInclude (ctx) {
+    await ctx.render('include.pug', { data: 'world' })
   },
 
-  * renderWithHelper (ctx) {
-    yield ctx.render('helper.pug')
+  async renderWithHelper (ctx) {
+    await ctx.render('helper.pug')
   },
 
-  * cache (ctx) {
-    yield ctx.render('cache.pug')
+  async cache (ctx) {
+    await ctx.render('cache.pug')
   },
 
-  * noCache (ctx) {
-    yield ctx.render('no-cache.pug')
+  async noCache (ctx) {
+    await ctx.render('no-cache.pug')
   },
 
-  * error (ctx) {
+  async error (ctx) {
     try {
-      yield ctx.render('error.pug')
+      await ctx.render('error.pug')
     } catch (e) {
       ctx.body = e.message
     }

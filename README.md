@@ -4,6 +4,8 @@
 
 egg view plugin for [pug](https://pugjs.org/).
 
+**V2 supports pug v3 and therefore [requires node >= 10](https://pugjs.org/api/migration-v3.html)**.
+
 ## Install
 
 ```
@@ -49,8 +51,8 @@ Render it
 ```js
 // app/controller/CONTROLLER.js
 exports = {
-  * ACTION (ctx) {
-    yield ctx.render('hello.pug', {
+  async ACTION (ctx) {
+    await ctx.render('hello.pug', {
       data: 'world'
     })
   }
